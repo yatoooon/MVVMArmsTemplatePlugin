@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>com.github.yatoooon.mvvmarmstemplateplugin</id>
+    <name>mvvmarmsTemplatePlugin</name>
+    <vendor>nifengxiao</vendor>
+
+    <depends>org.jetbrains.android</depends>
+    <depends>org.jetbrains.kotlin</depends>
+    <depends>com.intellij.modules.java</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService
+            serviceImplementation="com.github.yatoooon.mvvmarmstemplateplugin.services.MyApplicationService" />
+        <projectService
+            serviceImplementation="com.github.yatoooon.mvvmarmstemplateplugin.services.MyProjectService" />
+    </extensions>
+
+    <applicationListeners>
+        <listener
+            class="com.github.yatoooon.mvvmarmstemplateplugin.listeners.MyProjectManagerListener"
+            topic="com.intellij.openapi.project.ProjectManagerListener" />
+    </applicationListeners>
+
+    <extensions defaultExtensionNs="com.android.tools.idea.wizard.template">
+        <wizardTemplateProvider implementation="mvvmarms.SamplePluginTemplateProviderImpl" />
+    </extensions>
+</idea-plugin>
