@@ -1,4 +1,4 @@
-package com.github.yatoooon.mvvmarmstemplateplugin
+package com.github.yatoooon.mvvmarmstempleplugin
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

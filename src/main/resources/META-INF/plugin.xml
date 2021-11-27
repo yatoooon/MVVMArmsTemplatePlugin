@@ -10,14 +10,14 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService
-            serviceImplementation="com.github.yatoooon.mvvmarmstemplateplugin.services.MyApplicationService" />
+            serviceImplementation="com.github.yatoooon.mvvmarmstempleplugin.services.MyApplicationService" />
         <projectService
-            serviceImplementation="com.github.yatoooon.mvvmarmstemplateplugin.services.MyProjectService" />
+            serviceImplementation="com.github.yatoooon.mvvmarmstempleplugin.services.MyProjectService" />
     </extensions>
 
     <applicationListeners>
         <listener
-            class="com.github.yatoooon.mvvmarmstemplateplugin.listeners.MyProjectManagerListener"
+            class="com.github.yatoooon.mvvmarmstempleplugin.listeners.MyProjectManagerListener"
             topic="com.intellij.openapi.project.ProjectManagerListener" />
     </applicationListeners>
 

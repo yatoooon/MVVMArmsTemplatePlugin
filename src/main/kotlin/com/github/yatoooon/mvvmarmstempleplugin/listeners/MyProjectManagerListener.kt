@@ -1,6 +1,6 @@
-package com.github.yatoooon.mvvmarmstemplateplugin.listeners
+package com.github.yatoooon.mvvmarmstempleplugin.listeners
 
-import com.github.yatoooon.mvvmarmstemplateplugin.services.MyProjectService
+import com.github.yatoooon.mvvmarmstempleplugin.services.MyProjectService
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener
 
