@@ -11,6 +11,7 @@ fun armsFragmentKt(
 ) = """
 package $fragmentPackageName
 
+import android.os.Bundle
 import com.common.core.base.mvvm.BaseVMFragment
 import dagger.hilt.android.AndroidEntryPoint
 import ${packageName}.databinding.${moduleName}Fragment${pageName}Binding
@@ -19,7 +20,14 @@ import ${packageName}.R
 
 @AndroidEntryPoint
 class ${pageName}Fragment : BaseVMFragment<${moduleName}Fragment${pageName}Binding, ${pageName}ViewModel>() {
-
+    companion object {
+        fun newInstance(): ${pageName}Fragment {
+            val args = Bundle()
+            val fragment = ${pageName}Fragment()
+            fragment.arguments = args
+            return fragment
+        }
+    }
     override fun getLayoutId(): Int {
         return R.layout.${fragmentLayoutName}
     }
