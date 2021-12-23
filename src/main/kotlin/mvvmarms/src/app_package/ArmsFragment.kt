@@ -14,12 +14,12 @@ package $fragmentPackageName
 import android.os.Bundle
 import com.common.core.base.mvvm.BaseVMFragment
 import dagger.hilt.android.AndroidEntryPoint
-import ${packageName}.databinding.${moduleName}Fragment${pageName}Binding
+import ${packageName}.databinding.${moduleName}Fragment${pageName.toLowerCase().capitalize()}Binding
 import ${viewModelPackageName}.${pageName}ViewModel
 import ${packageName}.R
 
 @AndroidEntryPoint
-class ${pageName}Fragment : BaseVMFragment<${moduleName}Fragment${pageName}Binding, ${pageName}ViewModel>() {
+class ${pageName}Fragment : BaseVMFragment<${moduleName}Fragment${pageName.toLowerCase().capitalize()}Binding, ${pageName}ViewModel>() {
     companion object {
         fun newInstance(): ${pageName}Fragment {
             val args = Bundle()

@@ -13,12 +13,12 @@ package $activityPackageName
 
 import com.common.core.base.mvvm.BaseVMActivity
 import dagger.hilt.android.AndroidEntryPoint
-import ${packageName}.databinding.${moduleName}Activity${pageName}Binding
+import ${packageName}.databinding.${moduleName}Activity${pageName.toLowerCase().capitalize()}Binding
 import ${viewModelPackageName}.${pageName}ViewModel
 import ${packageName}.R
 
 @AndroidEntryPoint
-class ${pageName}Activity : BaseVMActivity<${moduleName}Activity${pageName}Binding,${pageName}ViewModel>() {
+class ${pageName}Activity : BaseVMActivity<${moduleName}Activity${pageName.toLowerCase().capitalize()}Binding,${pageName}ViewModel>() {
 
     override fun getLayoutId():Int {
               return R.layout.${activityLayoutName}
