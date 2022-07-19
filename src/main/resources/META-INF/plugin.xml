@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.yatoooon.mvvmarmstemplateplugin</id>
     <name>mvvmarmsTemplatePlugin</name>
-    <vendor>nifengxiao</vendor>
+    <vendor>yatoooon</vendor>
 
     <depends>org.jetbrains.android</depends>
     <depends>org.jetbrains.kotlin</depends>
