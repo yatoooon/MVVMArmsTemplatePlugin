@@ -5,7 +5,8 @@ fun manifestTemplateXml(packageName:String,activityPackageName:String,activityCl
 	package="${packageName}">
 
     <application>
-	    <activity android:name="${activityPackageName}.${activityClass}"/>
+	    <activity android:name="${activityPackageName}.${activityClass}"
+                  android:exported="false"/>
     </application>
 </manifest>
         """

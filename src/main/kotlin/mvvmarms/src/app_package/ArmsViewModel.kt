@@ -9,11 +9,13 @@ package $viewModelPackageName
 
 
 import android.app.Application
-import androidx.hilt.lifecycle.ViewModelInject
 import com.common.core.base.BaseModel
 import com.common.core.base.mvvm.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ${pageName}ViewModel @ViewModelInject constructor(
+@HiltViewModel
+class ${pageName}ViewModel @Inject constructor(
     application: Application
 ) : BaseViewModel<BaseModel>(application) {
 
