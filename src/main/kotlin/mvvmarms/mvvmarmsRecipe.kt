@@ -46,11 +46,11 @@ fun RecipeExecutor.mvvmarmsRecipe(
     }
 
     if (needActivity && generateActivityLayout) {
-        save(armsXml(), resOut.resolve("layout/${activityLayoutName}.xml"))
+        save(armsXml(pageName, viewModelPackageName), resOut.resolve("layout/${activityLayoutName}.xml"))
     }
 
     if (needFragment && generateFragmentLayout) {
-        save(armsXml(), resOut.resolve("layout/${fragmentLayoutName}.xml"))
+        save(armsXml(pageName, viewModelPackageName), resOut.resolve("layout/${fragmentLayoutName}.xml"))
     }
 
     if (needActivity) {

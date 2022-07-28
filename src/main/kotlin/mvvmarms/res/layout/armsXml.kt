@@ -1,18 +1,22 @@
 package mvvmarms.res.layout
 
-fun armsXml() = """
+fun armsXml(
+    pageName: String, viewModelPackageName: String
+) = """
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
-
+        <variable
+            name="model"
+            type="${viewModelPackageName}.${pageName}ViewModel"
+            />
     </data>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
         """
