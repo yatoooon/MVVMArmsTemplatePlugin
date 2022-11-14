@@ -4,20 +4,21 @@ package mvvmarms.src.app_package
 fun armsViewModelKt(
     pageName: String,
     viewModelPackageName: String,
+    modelPackageName: String
 ) = """
 package $viewModelPackageName
 
 
 import android.app.Application
-import com.common.core.base.BaseModel
+import $modelPackageName.${pageName}Model
 import com.common.core.base.mvvm.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class ${pageName}ViewModel @Inject constructor(
-    application: Application
-) : BaseViewModel<BaseModel>(application) {
+    application: Application,${pageName.toLowerCase().capitalize()}Model:${pageName}Model
+) : BaseViewModel<${pageName}Model>(application,${pageName.toLowerCase().capitalize()}Model) {
 
 }
 """

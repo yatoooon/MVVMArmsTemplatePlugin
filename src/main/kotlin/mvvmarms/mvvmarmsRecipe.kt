@@ -92,7 +92,8 @@ fun RecipeExecutor.mvvmarmsRecipe(
         save(
             armsViewModelKt(
                 pageName,
-                viewModelPackageName
+                viewModelPackageName,
+                modelPackageName
             ), srcOut.resolve("mvvm/vm/${pageName}ViewModel.kt")
         )
     }
