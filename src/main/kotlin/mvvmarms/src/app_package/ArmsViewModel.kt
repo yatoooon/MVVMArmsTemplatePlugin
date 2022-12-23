@@ -17,8 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ${pageName}ViewModel @Inject constructor(
-    application: Application,${pageName.toLowerCase().capitalize()}Model:${pageName}Model
-) : BaseViewModel<${pageName}Model>(application,${pageName.toLowerCase().capitalize()}Model) {
+    application: Application,${pageName.decapitalize()}Model:${pageName}Model
+) : BaseViewModel<${pageName}Model>(application,${pageName.decapitalize()}Model) {
 
 }
 """
